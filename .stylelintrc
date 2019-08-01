@@ -9,7 +9,7 @@
         "declaration-block-no-redundant-longhand-properties": [
           true,
           {
-            "ignoreShorthands": ["flex-flow"]
+            "ignoreShorthands": ["flex-flow","grid-template"]
           }
         ],
         "function-comma-space-after": "always",

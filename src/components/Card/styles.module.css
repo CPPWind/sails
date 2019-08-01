@@ -1,0 +1,52 @@
+.card {
+  display: grid;
+  margin: var(--spacing-none);
+  padding: var(--spacing-none);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-3);
+  border-color: var(--dark-blue);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "article" "footer";
+
+  & > header {
+    padding-right: var(--spacing-small);
+    padding-left: var(--spacing-small);
+    border-top-left-radius: var(--border-radius-3);
+    border-top-right-radius: var(--border-radius-3);
+    text-align: center;
+  }
+
+  & > *:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.cardHeader {
+  padding: var(--spacing-extra-extra-small) var(--spacing-extra-small);
+  background-color: var(--card-header-bg);
+  color: var(--card-header-fg);
+  grid-area: header;
+}
+
+.cardArticle {
+  background-color: var(--card-article-bg);
+  color: var(--card-article-fg);
+  grid-area: article;
+}
+
+.default {
+  --card-header-bg: var(--dark-blue);
+  --card-header-fg: var(--near-white);
+  --card-article-bg: var(--white-20);
+  --card-article-fg: var(--near-black);
+}
+
+.angry {
+  --card-header-bg: var(--dark-red);
+  --card-header-fg: var(--black);
+  --card-article-bg: var(--washed-red);
+  --card-article-fg: var(--near-black);
+}
