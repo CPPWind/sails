@@ -1,27 +1,27 @@
 // import global vars for a whole app
-require('./globals');
+require('./globals')
 
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const debug = require('debug')('app:webpack:config');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const debug = require('debug')('app:webpack:config')
 
 const generateScopedName = (localName, resourcePath) => {
   const [filename, parent, type] = resourcePath
     .replace('.module.css', '')
     .split('/')
-    .reverse();
+    .reverse()
 
-  const filePart = [type, parent, filename === 'styles' ? null : filename].filter(str => str).join('-');
+  const filePart = [type, parent, filename === 'styles' ? null : filename].filter(str => str).join('-')
 
-  const selector = ['sails', filePart, localName].filter(str => str).join('-');
+  const selector = ['sails', filePart, localName].filter(str => str).join('-')
 
-  return selector;
-};
+  return selector
+}
 
 // ------------------------------------
 // RULES INJECTION!
@@ -34,8 +34,8 @@ const rules = [
     exclude: /(node_modules|bower_components)/,
     loader: 'eslint-loader',
     options: {
-      quiet: true
-    }
+      quiet: true,
+    },
   },
   {
     enforce: 'pre',
@@ -44,25 +44,25 @@ const rules = [
     loader: 'tslint-loader',
     options: {
       quiet: true,
-      tsConfigFile: './tsconfig.json'
-    }
+      tsConfigFile: './tsconfig.json',
+    },
   },
   // JAVASCRIPT/JSON
   {
     test: /\.html$/,
     use: {
-      loader: 'html-loader'
-    }
+      loader: 'html-loader',
+    },
   },
   {
     test: /\.(js|jsx|ts|tsx)?$/,
     exclude: /(node_modules|bower_components)/,
-    loader: 'babel-loader'
+    loader: 'babel-loader',
   },
   {
     type: 'javascript/auto',
     test: /\.json$/,
-    loader: 'json-loader'
+    loader: 'json-loader',
   },
   // STYLES
   {
@@ -76,45 +76,45 @@ const rules = [
           modules: {
             mode: 'local',
             getLocalIdent: (context, _localIdentName, localName, _options) => {
-              return generateScopedName(localName, context.resourcePath);
-            }
-          }
-        }
+              return generateScopedName(localName, context.resourcePath)
+            },
+          },
+        },
       },
       'postcss-loader',
-      'sass-loader'
-    ]
+      'sass-loader',
+    ],
   },
   // FILE/IMAGES
   {
     test: /\.woff(\?.*)?$/,
-    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff',
   },
   {
     test: /\.woff2(\?.*)?$/,
-    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2',
   },
   {
     test: /\.otf(\?.*)?$/,
-    loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype'
+    loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype',
   },
   {
     test: /\.ttf(\?.*)?$/,
-    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream',
   },
   {
     test: /\.eot(\?.*)?$/,
-    loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]'
+    loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]',
   },
   {
     test: /\.svg(\?.*)?$/,
-    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml',
   },
   {
     test: /\.(png|jpg)$/,
-    loader: 'url-loader?limit=8192'
-  }
-];
+    loader: 'url-loader?limit=8192',
+  },
+]
 
 // ------------------------------------
 // BUNDLES OPTIMIZATION
@@ -123,7 +123,7 @@ const optimization = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minChunks: 2
+      minChunks: 2,
     },
     minimizer: [
       new UglifyJsPlugin({
@@ -131,18 +131,18 @@ const optimization = {
           warnings: false,
           compress: {
             unused: true,
-            dead_code: true
-          }
+            dead_code: true,
+          },
         },
-        sourceMap: true
+        sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
   performance: {
-    hints: false
-  }
-};
+    hints: false,
+  },
+}
 
 // ------------------------------------
 // STAGE PLUGINS INJECTION! [DEVELOPMENT, PRODUCTION, TESTING]
@@ -155,27 +155,27 @@ const stagePlugins = {
       filename: 'index.html',
       inject: 'body',
       minify: false,
-      chunksSortMode: 'auto'
+      chunksSortMode: 'auto',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   production: [
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
-      chunkFilename: '[name].[hash].css'
+      chunkFilename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve('./src/index.html'),
       filename: 'index.html',
       inject: 'body',
       minify: {
-        collapseWhitespace: true
+        collapseWhitespace: true,
       },
-      chunksSortMode: 'auto'
-    })
-  ]
-};
+      chunksSortMode: 'auto',
+    }),
+  ],
+}
 
 // ------------------------------------
 // STAGE CONFIGURATION INJECTION! [DEVELOPMENT, PRODUCTION]
@@ -186,30 +186,30 @@ const stageConfig = {
     stats: {
       chunks: true,
       chunkModules: true,
-      colors: true
-    }
+      colors: true,
+    },
   },
   development: {
     devtool: 'source-map',
     stats: {
       chunks: true,
       chunkModules: true,
-      colors: true
-    }
+      colors: true,
+    },
   },
   production: {
     devtool: 'source-map',
     stats: {
       chunks: true,
       chunkModules: true,
-      colors: true
-    }
-  }
-};
+      colors: true,
+    },
+  },
+}
 
 const createConfig = () => {
-  debug('Creating configuration.');
-  debug(`Enabling devtools for '${__NODE_ENV__} Mode!'`);
+  debug('Creating configuration.')
+  debug(`Enabling devtools for '${__NODE_ENV__} Mode!'`)
 
   const webpackConfig = {
     mode: __DEV__ ? 'development' : 'production',
@@ -218,33 +218,33 @@ const createConfig = () => {
     devtool: stageConfig[__NODE_ENV__].devtool,
     stats: stageConfig[__NODE_ENV__].stats,
     module: {
-      rules: [...rules]
+      rules: [...rules],
     },
     ...optimization,
     resolve: {
       modules: ['node_modules'],
-      extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
-    }
-  };
+      extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+    },
+  }
 
   // ------------------------------------
   // Entry Points
   // ------------------------------------
-  const appEnterPrefixPlugins = ['babel-polyfill'];
-  const appPath = path.resolve(__dirname, 'src/index.js');
-  const appEntryPoint = [...appEnterPrefixPlugins, appPath];
+  const appEnterPrefixPlugins = ['babel-polyfill']
+  const appPath = path.resolve(__dirname, 'src/index.js')
+  const appEntryPoint = [...appEnterPrefixPlugins, appPath]
 
   webpackConfig.entry = {
-    app: __DEV__ ? appEntryPoint.concat('webpack-hot-middleware/client?path=/__webpack_hmr') : appEntryPoint
-  };
+    app: __DEV__ ? appEntryPoint.concat('webpack-hot-middleware/client?path=/__webpack_hmr') : appEntryPoint,
+  }
 
   // ------------------------------------
   // Bundle externals
   // ------------------------------------
   webpackConfig.externals = {
     react: 'React',
-    'react-dom': 'ReactDOM'
-  };
+    'react-dom': 'ReactDOM',
+  }
 
   // ------------------------------------
   // Bundle Output
@@ -253,27 +253,27 @@ const createConfig = () => {
     filename: '[name].[hash].js',
     chunkFilename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
-  };
+    publicPath: '/',
+  }
 
   // ------------------------------------
   // Plugins
   // ------------------------------------
-  debug(`Enable plugins for '${__NODE_ENV__} Mode!'`);
+  debug(`Enable plugins for '${__NODE_ENV__} Mode!'`)
   webpackConfig.plugins = [
     new webpack.DefinePlugin({
       __DEV__,
       __PROD__,
-      __TEST__
+      __TEST__,
     }),
-    ...stagePlugins[__NODE_ENV__]
-  ];
+    ...stagePlugins[__NODE_ENV__],
+  ]
 
   // ------------------------------------
   // Finishing the Webpack configuration!
   // ------------------------------------
-  debug(`Webpack Bundles is Ready for '${__NODE_ENV__} Mode!'`);
-  return webpackConfig;
-};
+  debug(`Webpack Bundles is Ready for '${__NODE_ENV__} Mode!'`)
+  return webpackConfig
+}
 
-module.exports = createConfig();
+module.exports = createConfig()

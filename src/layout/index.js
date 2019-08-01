@@ -1,10 +1,10 @@
-import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import React from 'react'
+import { Route, withRouter } from 'react-router-dom'
 
-import { Header, Footer } from '../components';
+import { Header, Footer } from '../components'
 
-import { Body } from '../containers/Wrappers';
-import styles from '../styles/index.scss';
+import { Body } from '../containers/Wrappers'
+import styles from '../styles/index.scss'
 
 const CoreLayout = () => {
   return (
@@ -13,7 +13,7 @@ const CoreLayout = () => {
       <Route exact path='/' component={Body} />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default withRouter(CoreLayout);
+export default withRouter(CoreLayout)

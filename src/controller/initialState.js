@@ -1,8 +1,8 @@
 const initialState = {
   app: {
     appName: 'CoConatBuider',
-    imageToShow: 1
-  }
-};
+    imageToShow: 1,
+  },
+}
 
-export default initialState;
+export default initialState

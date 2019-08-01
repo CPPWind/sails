@@ -1,23 +1,23 @@
-import { combineReducers } from 'redux';
-import { connectRouter } from 'connected-react-router';
-import app from '../../modules/reducers';
-import history from '../history';
+import { combineReducers } from 'redux'
+import { connectRouter } from 'connected-react-router'
+import app from '../../modules/reducers'
+import history from '../history'
 
 // root Redux reducer
 const makeRootReducer = asyncReducers => {
   return combineReducers({
     ...asyncReducers,
     app,
-    router: connectRouter(history)
-  });
-};
+    router: connectRouter(history),
+  })
+}
 
 // Splite-Chunks environment, probably you would always need this
 export const injectReducer = (store, { key, reducer }) => {
-  if (Object.hasOwnProperty.call(store.asyncReducers, key)) return;
-  store.asyncReducers[key] = reducer;
+  if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
+  store.asyncReducers[key] = reducer
 
-  store.replaceReducer(makeRootReducer(store.asyncReducers));
-};
+  store.replaceReducer(makeRootReducer(store.asyncReducers))
+}
 
-export default makeRootReducer;
+export default makeRootReducer

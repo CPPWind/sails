@@ -144,7 +144,7 @@
           2,
           "never"
       ],
-      "semi": ["error", "always"],
+      "semi": ["error", "never"],
       "prefer-const": 1,
       "no-param-reassign": [
           1,
@@ -158,7 +158,7 @@
       "curly": 0,
       "comma-dangle": [
           2,
-          "never"
+          "only-multiline"
       ],
       "func-style": [
           2,
