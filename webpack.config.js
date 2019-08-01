@@ -150,13 +150,13 @@ const optimization = {
 const stagePlugins = {
   test: [new BundleAnalyzerPlugin()],
   development: [
-    new HtmlWebpackPlugin({
-      template: path.resolve('./src/index.html'),
-      filename: 'index.html',
-      inject: 'body',
-      minify: false,
-      chunksSortMode: 'auto',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve('./src/index.html'),
+    //   filename: 'index.html',
+    //   inject: 'body',
+    //   minify: false,
+    //   chunksSortMode: 'auto',
+    // }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ],

@@ -15,20 +15,22 @@
         "function-comma-space-after": "always",
         "declaration-block-no-duplicate-properties": null,
         "comment-empty-line-before": [
-          "always"
+          "always",{
+            "except": ["first-nested"]
+          }
         ],
         "at-rule-no-unknown": [true, {
           "ignoreAtRules": ["function", "if", "each", "include", "mixin"]
         }],
         "at-rule-empty-line-before": [
-          "always",
+          false,
           {
             "except": [
               "after-same-name"
             ]
           }
         ],
-        "number-leading-zero": "never",
+        "number-leading-zero": "always",
         "indentation": [
             2, {
                 "indentInsideParens": "once-at-root-twice-in-block",

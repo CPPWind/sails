@@ -1,0 +1,135 @@
+/*
+
+   TYPOGRAPHY
+   http://tachyons.io/docs/typography/measure/
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+
+/* Measure is limited to ~66 characters */
+.measure {
+  max-width: var(--measure);
+}
+
+/* Measure is limited to ~80 characters */
+.measure-wide {
+  max-width: var(--measure-wide);
+}
+
+/* Measure is limited to ~45 characters */
+.measure-narrow {
+  max-width: var(--measure-narrow);
+}
+
+/* Book paragraph style - paragraphs are indented with no vertical spacing. */
+.indent {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-indent: 1em;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+/* Combine this class with a width to truncate text (or just leave as is to truncate at width of containing element. */
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (--breakpoint-not-small) {
+  .measure-ns {
+    max-width: var(--measure);
+  }
+
+  .measure-wide-ns {
+    max-width: var(--measure-wide);
+  }
+
+  .measure-narrow-ns {
+    max-width: var(--measure-narrow);
+  }
+
+  .indent-ns {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 1em;
+  }
+
+  .small-caps-ns {
+    font-variant: small-caps;
+  }
+
+  .truncate-ns {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .measure-m {
+    max-width: var(--measure);
+  }
+
+  .measure-wide-m {
+    max-width: var(--measure-wide);
+  }
+
+  .measure-narrow-m {
+    max-width: var(--measure-narrow);
+  }
+
+  .indent-m {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 1em;
+  }
+
+  .small-caps-m {
+    font-variant: small-caps;
+  }
+
+  .truncate-m {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (--breakpoint-large) {
+  .measure-l {
+    max-width: var(--measure);
+  }
+
+  .measure-wide-l {
+    max-width: var(--measure-wide);
+  }
+
+  .measure-narrow-l {
+    max-width: var(--measure-narrow);
+  }
+
+  .indent-l {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 1em;
+  }
+
+  .small-caps-l {
+    font-variant: small-caps;
+  }
+
+  .truncate-l {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
