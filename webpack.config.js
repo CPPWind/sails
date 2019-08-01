@@ -10,6 +10,19 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const debug = require('debug')('app:webpack:config');
 
+const generateScopedName = (localName, resourcePath) => {
+  const [filename, parent, type] = resourcePath
+    .replace('.module.css', '')
+    .split('/')
+    .reverse();
+
+  const filePart = [type, parent, filename === 'styles' ? null : filename].filter(str => str).join('-');
+
+  const selector = ['sails', filePart, localName].filter(str => str).join('-');
+
+  return selector;
+};
+
 // ------------------------------------
 // RULES INJECTION!
 // ------------------------------------
@@ -60,8 +73,12 @@ const rules = [
         loader: 'css-loader',
         options: {
           importLoaders: 2,
-          modules: true,
-          localIdentName: '[local]___[hash:base64:5]'
+          modules: {
+            mode: 'local',
+            getLocalIdent: (context, _localIdentName, localName, _options) => {
+              return generateScopedName(localName, context.resourcePath);
+            }
+          }
         }
       },
       'postcss-loader',

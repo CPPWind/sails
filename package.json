@@ -1,9 +1,9 @@
 {
-  "name": "webpack4react17StarterKit",
+  "name": "sails",
   "version": "1.0.0",
-  "description": "test stend to show how easy we can make code-splitting by in-box features in React 16.7 - Suspense and lazy.",
-  "main": "index.tsx",
-  "author": "Sviat Kuzhelev",
+  "description": "CPP React Components and Style",
+  "main": "index.ts",
+  "author": "sparrish@cppwind.com",
   "license": "MIT",
   "husky": {
     "hooks": {
@@ -45,9 +45,9 @@
     "push": "npm run lint && git push",
     "compile": "better-npm-run compile",
     "prettier": "prettier --single-quote --no-semi --print-width 120 --write '{src,tests}/**/*.{js,ts}'",
-    "eslint": "eslint --quiet ../../.eslintrc",
+    "eslint": "eslint --quiet ./.eslintrc",
     "tslint": "tslint --fix -c tslint.json",
-    "csslint": "stylelint **/*.scss --config ../../.stylelintrc"
+    "csslint": "stylelint **/*.sc --config ./.stylelintrc"
   },
   "betterScripts": {
     "compile": {
