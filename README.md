@@ -1,118 +1,68 @@
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-# CoConat - React Apps Builder [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=You%20will%20never%20know%20how%20everything%20work%20but%20you%20should%20understand%20the%20system&url=https://medium.com/@svyat770/lets-kill-create-react-app-452cb55f77d3&via=svyat770&hashtags=react,webpack,babel,webdevelopment,developers)
-### Make custom React app development easly as never before!
+In the project directory, you can run:
 
-[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/BiosBoy/coconat/blob/master/LICENSE)
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/BiosBoy/coconat/blob/master/LICENSE)
-[![GitHub package version](https://img.shields.io/badge/version-2.0.0-red.svg)](https://github.com/BiosBoy/coconat)
-[![Build Status](https://travis-ci.org/BiosBoy/coconat.svg?branch=master)](https://travis-ci.org/BiosBoy/coconat)
+### `npm start`
 
-Check CocoNat StartKit Builder [Official Documentation Tutorial](https://medium.com/@svyat770/lets-kill-create-react-app-452cb55f77d3) on Medium.
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![logo_image](https://raw.githubusercontent.com/BiosBoy/coconat/master/LOGO_COCONAT.jpg)
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-This **Webpack4 + React16 Templater** is created from the point of view to solve developer day-to-day problems with app suits boilerplate creation. It has all what we need to start React app creation with rocket speed without worring about, like:
- 1. Oh, I need to optimize my app!
- 2. Oh, I need to create a server for app handling!
- 3. Oh, I need a Redux/Redux-Saga installations for state managment in app!
- 4. Oh, I need to install Webpack and spend a time to configure it!
- 5. Oh, I need to optimize and minimize JS/CSS/etc. bundles!
- 6. Oh, I need to install and configure testing environment!
- 7. And a lot of other boring things...
+### `npm test`
 
-So, by using this **Templater** you will save a lot of time and will stay focused only on your own app creation. Have fun :)
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Features:
- * Fast React app creation.
- * Can be custumized as you wish.
- * BrowserSync Server is configured just out of the box!
- * All needed packages to work you can bootstap just by one command with `lerna` npm package: `lerna bootstrap`
- * Support TypeScript version 3^.
+### `npm run build`
 
-## Installation
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Clone the repo on your Machine by:
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-   ```
-    git clone https://github.com/BiosBoy/coconat.git
-   ```
-2. Inside the root folder install all requeried packages of the **CoConat Builder** by command:
-   ```
-    yarn lerna bootstrap
-   ```
-3. Start up your project via **development**, **production** or **test** compilation:
-   ```
-    yarn start:dev - development mode
-    yarn start:prod - production mode
-    yarn start:test - testing mode
-   ```
-4. Test and validate yout project code with **Jest & Enzyme** test environment by command:
-   ```
-    yarn jest ./*/**.test.*
-   ```
-That's all what you need to start building your own project! Have fun and happy coding! :)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# What is you have out of the box?
- ## Webpack:
- * Fully support all Webpack 4^ possibilities.
- * Support code-splitting and bundles app creation out of the box.
- * Created 3 independent development cases: `test`, `development`, `production`. Each of them has own best optimized configuration.
- * Integrated Babel 7^ with supporting all ES6-ES8 features.
- * Integrated Ujlifty Webpack Plugin ^0 for optimizing JS/JSX/TS/TSX bundles for development and production.
- * Integrated Mini CSS Webpack Plugin ^0 + OptimizeCSS Assets Webpack Plugin ^5 for optimizing CSS bundles for development and production.
- * Integrated Webpack Bundle Analyzer ^3 for visual analyzing of code/bundles weight.
- * Transpile all app code into native ES5 for supporting even an oldest browsers.
+### `npm run eject`
 
- ## React:
- * Support all new features from React 16.7@-alpha release.
- * Hooks, Suspence and Lazy load can be used out of the box.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
- ## Redux:
- * Redux^4.0.1 is fully integrated with React to start your work asap.
- * Including Redux-Saga^0.16.2 for async actions handling.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Routing:
- * React-Router^4.3.1 - React app from the start can be multy-page oriented.
- * Connected-React-Router^5.0.1 holdes synhromious app Redux and Browser Location states.
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
- ## Styling:
- * Support CSS/SASS style markup.
- * Integrated CSSModules for independent component styling.
- * Including PostCSS ^2 post-processor.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
- ## Testing:
- * Integrated Jest 23^ + Enzyme 3^ testing environment.
- * Includes pre-commits hooks for testing app before commit (if test are present in).
- * Support JS/JSX/TS/TSX file extensions.
+## Learn More
 
- ## Linting:
- * Integrated `prettier` package for beatify pre-commited code.
- * Integrated eslint 5^ + tslint 5^ + stylelint 9^ linters based on the most popular schemas in the world (facebook, microsoft, airbnb, etc.) with React life-cycle ecosystem supporting.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
- ## Git:
- * Includes pre-commits hooks with husky ^1
- * Includes lint-stages ^1 for styling and testing whole app code (js/jsx/ts/tsx/css/scss/json) before commiting.
- * Checks code on lint rule errors before accept user commit.
- * Run test suits before accept user commit.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-# Technical information:
-### App technical environment that are 100% support with:
- * Node 10.5
- * Yarn 1.9.4
- * Webpack 4.29.1
- * React 16.8
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### App global package installing requirements:
- * node
- * yarn/npm
- * eslint/tsline/stylelint
- * lerna
- * typescript
+### Analyzing the Bundle Size
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
+### Making a Progressive Web App
 
-# FAQ:
- ### 1. "Command `lerna bootstrap` is does not works."
- * To bring it work you need install it globally first by command `yarn add lerna -g`. After that navigate to your working folder and repeat command `lerna bootstrap` one more time.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
