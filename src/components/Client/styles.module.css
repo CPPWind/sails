@@ -1,0 +1,10 @@
+.client {
+  composes: bg-dark-blue near-white from global;
+}
+
+.centered {
+  composes: flexCenter from global;
+  height: 100%;
+  width: 100%;
+
+}

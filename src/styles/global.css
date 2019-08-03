@@ -8,11 +8,13 @@
 @import './__variables.css';
 @import './_flex.css';
 @import './_grid.css';
+@import './_skins.css';
 @import './_typography.css';
 
 html,
 body,
 #___gatsby,
+#clientRoot,
 #___gatsby > div,
 main {
   margin: var(--spacing-none);

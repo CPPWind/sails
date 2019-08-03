@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 
 // import initialState from './mocks/body'
 
-import Card from './index.js'
+import Card from 'components/Card/index.js'
 
 describe('<Card Component Test />', () => {
   it('should render basic Body Component with an image', () => {
