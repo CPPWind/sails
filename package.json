@@ -3,18 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "prettier": "^1.18.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-dom": "^16.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "yarn story",
+    "build-storybook": "build-storybook",
+    "story": "start-storybook -p 3000 -h 0.0.0.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,8 +36,14 @@
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
     "@storybook/react": "^5.1.10",
+    "babel-loader": "^8.0.6",
+    "change-case": "^3.1.0",
+    "cpp-react-scripts": "^3.0.2",
+    "eslint": "5.16.0",
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
+    "lorem-ipsum": "^2.0.3",
+    "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-no-unsupported-browser-features": "^3.0.2",

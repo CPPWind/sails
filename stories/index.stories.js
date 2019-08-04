@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
-
+import Swatch from '../src/components/Swatch'
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
@@ -17,3 +17,6 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+
+storiesOf('Swatch', module)
+  .add('Red on Black', () => <Swatch color="red" bgColor="black" /> )

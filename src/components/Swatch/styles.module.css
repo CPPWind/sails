@@ -1,0 +1,21 @@
+@import "../../styles/__palette.css";
+@import "../../styles/_skins.css";
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+
+  & > h2 {
+    font-size: var(--font-size-6);
+    text-align: center;
+  }
+
+  & > p {
+    flex: 0 1 auto;
+    font-size: var(--font-size-4);
+  }
+}

@@ -1,0 +1,6 @@
+---
+to: <%= cssPath %>
+---
+.<%= cssSelector %> {
+
+}
