@@ -3,9 +3,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-
+import {withKnobs, text, select} from '@storybook/addon-knobs'
 import { Button, Welcome } from '@storybook/react/demo';
-import Swatch from '../src/components/Swatch'
+import Swatch from './components/Swatch'
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
@@ -18,5 +18,3 @@ storiesOf('Button', module)
     </Button>
   ));
 
-storiesOf('Swatch', module)
-  .add('Red on Black', () => <Swatch color="red" bgColor="black" /> )

@@ -8,11 +8,6 @@
 @import './__palette.css';
 
 :root {
-  /* brand colors */
-  --brand-danger: var(--red);
-  --brand-info: var(--blue);
-  --brand-success: var(--green);
-  --brand-warning: var(--gold);
 
   /* Base Fonts */
   --body-font: var(--open-sans);

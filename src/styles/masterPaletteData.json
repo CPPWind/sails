@@ -1,0 +1,458 @@
+{
+  "brand-danger": {
+    "name": "brand-danger",
+    "color": "var(--red)",
+    "group": "brand",
+    "text": "var(--near-black)"
+  },
+  "brand-info": {
+    "name": "brand-info",
+    "color": "var(--blue)",
+    "group": "brand",
+    "text": "var(--near-black)"
+  },
+  "brand-success": {
+    "name": "brand-success",
+    "color": "var(--green)",
+    "group": "brand",
+    "text": "var(--near-black)"
+  },
+  "brand-warning": {
+    "name": "brand-warning",
+    "color": "var(--gold)",
+    "group": "brand",
+    "text": "var(--near-black)"
+  },
+  "brand-default": {
+    "name": "brand-default",
+    "color": "var(--dark-blue)",
+    "group": "brand",
+    "text": "var(--near-white)"
+  },
+  "black": {
+    "name": "black",
+    "color": "#000",
+    "group": "grayscale",
+    "text": "var(--near-white)"
+  },
+  "near-black": {
+    "name": "near-black",
+    "color": "#111",
+    "group": "grayscale",
+    "text": "var(--near-white)"
+  },
+  "dark-gray": {
+    "name": "dark-gray",
+    "color": "#333",
+    "group": "grayscale",
+    "text": "var(--near-white)"
+  },
+  "mid-gray": {
+    "name": "mid-gray",
+    "color": "#555",
+    "group": "grayscale",
+    "text": "var(--near-white)"
+  },
+  "gray": {
+    "name": "gray",
+    "color": "#777",
+    "group": "grayscale",
+    "text": "var(--near-white)"
+  },
+  "silver": {
+    "name": "silver",
+    "color": "#999",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "light-silver": {
+    "name": "light-silver",
+    "color": "#aaa",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "moon-gray": {
+    "name": "moon-gray",
+    "color": "#ccc",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "light-gray": {
+    "name": "light-gray",
+    "color": "#eee",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "near-white": {
+    "name": "near-white",
+    "color": "#f4f4f4",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "white": {
+    "name": "white",
+    "color": "#fff",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "transparent": {
+    "name": "transparent",
+    "color": "transparent",
+    "group": "grayscale",
+    "text": "var(--near-black)"
+  },
+  "black-90": {
+    "name": "black-90",
+    "color": "rgba(0, 0, 0, 0.9)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-80": {
+    "name": "black-80",
+    "color": "rgba(0, 0, 0, 0.8)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-70": {
+    "name": "black-70",
+    "color": "rgba(0, 0, 0, 0.7)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-60": {
+    "name": "black-60",
+    "color": "rgba(0, 0, 0, 0.6)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-50": {
+    "name": "black-50",
+    "color": "rgba(0, 0, 0, 0.5)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-40": {
+    "name": "black-40",
+    "color": "rgba(0, 0, 0, 0.4)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-30": {
+    "name": "black-30",
+    "color": "rgba(0, 0, 0, 0.3)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-20": {
+    "name": "black-20",
+    "color": "rgba(0, 0, 0, 0.2)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-10": {
+    "name": "black-10",
+    "color": "rgba(0, 0, 0, 0.1)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-05": {
+    "name": "black-05",
+    "color": "rgba(0, 0, 0, 0.05)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-025": {
+    "name": "black-025",
+    "color": "rgba(0, 0, 0, 0.025)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "black-0125": {
+    "name": "black-0125",
+    "color": "rgba(0, 0, 0, 0.0125)",
+    "group": "darkOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-90": {
+    "name": "white-90",
+    "color": "rgba(255, 255, 255, 0.9)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-80": {
+    "name": "white-80",
+    "color": "rgba(255, 255, 255, 0.8)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-70": {
+    "name": "white-70",
+    "color": "rgba(255, 255, 255, 0.7)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-60": {
+    "name": "white-60",
+    "color": "rgba(255, 255, 255, 0.6)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-50": {
+    "name": "white-50",
+    "color": "rgba(255, 255, 255, 0.5)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-40": {
+    "name": "white-40",
+    "color": "rgba(255, 255, 255, 0.4)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-30": {
+    "name": "white-30",
+    "color": "rgba(255, 255, 255, 0.3)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-20": {
+    "name": "white-20",
+    "color": "rgba(255, 255, 255, 0.2)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-10": {
+    "name": "white-10",
+    "color": "rgba(255, 255, 255, 0.1)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-05": {
+    "name": "white-05",
+    "color": "rgba(255, 255, 255, 0.05)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-025": {
+    "name": "white-025",
+    "color": "rgba(255, 255, 255, 0.025)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "white-0125": {
+    "name": "white-0125",
+    "color": "rgba(255, 255, 255, 0.0125)",
+    "group": "lightOpacity",
+    "text": "var(--near-black)"
+  },
+  "turquoise": {
+    "name": "turquoise",
+    "color": "#40e0d0",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "dark-purple": {
+    "name": "dark-purple",
+    "color": "#431f73",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "yellow-green": {
+    "name": "yellow-green",
+    "color": "#9acd32",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "olive": {
+    "name": "olive",
+    "color": "#808000",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "tan": {
+    "name": "tan",
+    "color": "#d2b48c",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "wheat": {
+    "name": "wheat",
+    "color": "#f5deb3",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "sienna": {
+    "name": "sienna",
+    "color": "#a0522d",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "sandy-brown": {
+    "name": "sandy-brown",
+    "color": "#a0522d",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "burlywood": {
+    "name": "burlywood",
+    "color": "#deb887",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "dark-red": {
+    "name": "dark-red",
+    "color": "#e7040f",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "red": {
+    "name": "red",
+    "color": "#ff4136",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "light-red": {
+    "name": "light-red",
+    "color": "#ff725c",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "dark-gold": {
+    "name": "dark-gold",
+    "color": "#d48c00",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "orange": {
+    "name": "orange",
+    "color": "#ff6300",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "gold": {
+    "name": "gold",
+    "color": "#ffb700",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "yellow": {
+    "name": "yellow",
+    "color": "#ffd700",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "light-yellow": {
+    "name": "light-yellow",
+    "color": "#fbf1a9",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "purple": {
+    "name": "purple",
+    "color": "#5e2ca5",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "light-purple": {
+    "name": "light-purple",
+    "color": "#a463f2",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "dark-pink": {
+    "name": "dark-pink",
+    "color": "#d5008f",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "hot-pink": {
+    "name": "hot-pink",
+    "color": "#ff41b4",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "pink": {
+    "name": "pink",
+    "color": "#ff80cc",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "light-pink": {
+    "name": "light-pink",
+    "color": "#ffa3d7",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "dark-green": {
+    "name": "dark-green",
+    "color": "#137752",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "green": {
+    "name": "green",
+    "color": "#19a974",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "light-green": {
+    "name": "light-green",
+    "color": "#9eebcf",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "navy": {
+    "name": "navy",
+    "color": "#001b44",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "dark-blue": {
+    "name": "dark-blue",
+    "color": "#00449e",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "blue": {
+    "name": "blue",
+    "color": "#357edd",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "light-blue": {
+    "name": "light-blue",
+    "color": "#96ccff",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "lightest-blue": {
+    "name": "lightest-blue",
+    "color": "#cdecff",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "washed-blue": {
+    "name": "washed-blue",
+    "color": "#f6fffe",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "washed-green": {
+    "name": "washed-green",
+    "color": "#e8fdf5",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "washed-yellow": {
+    "name": "washed-yellow",
+    "color": "#fffceb",
+    "group": "color",
+    "text": "var(--near-black)"
+  },
+  "washed-red": {
+    "name": "washed-red",
+    "color": "#ffdfdf",
+    "group": "color",
+    "text": "var(--near-black)"
+  }
+}

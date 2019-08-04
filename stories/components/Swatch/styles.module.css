@@ -1,5 +1,5 @@
-@import "../../styles/__palette.css";
-@import "../../styles/_skins.css";
+@import "../../../src/styles/__palette.css";
+@import "../../../src/styles/_skins.css";
 
 .swatch {
   display: flex;
