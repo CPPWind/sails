@@ -1,0 +1,28 @@
+.typography {
+}
+.hElements {
+
+}
+
+.fontSizes {
+  & > *:nth-child(even) {
+    background-color: var(--silver, #999);
+
+  }
+}
+
+.fontSpacing {
+  margin: auto;
+  & > h2 {
+    text-align: center;
+
+  }
+  & p {
+    margin: var(--spacing-small, .5rem);
+  }
+}
+
+.fonts {
+
+}
+

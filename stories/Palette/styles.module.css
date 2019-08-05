@@ -15,35 +15,53 @@
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
 
-    background-image: url("rgbwheel.png");
-    background-size: cover;
+    & > li {
+      background-image: url("rgbwheel.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      & > div {
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
   }
 }
 
-.cols2 {
+.brand {
   & > ul {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }
 
-.cols4 {
+.grayscale {
+  & > ul {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+}
+
+.darkOpacity {
   & > ul {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
 }
 
-.cols5 {
+.lightOpacity {
   & > ul {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
-.cols6 {
+.color {
   & > ul {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
   }
 }

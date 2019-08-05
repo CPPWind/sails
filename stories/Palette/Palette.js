@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import styles from "./styles.module.css";
-import paletteData from "../../../src/styles/masterPaletteData";
+import paletteData from "../../src/styles/masterPaletteData";
 import colorWheel from "./rgbwheel.png"
 
 const Palette = ({ className, forGroup }) => {
@@ -10,15 +10,18 @@ const Palette = ({ className, forGroup }) => {
   );
   let cols = Math.max(Math.ceil(Math.sqrt(swatches.length)), 4);
   return (
-    <article className={cx(className, styles.palette, styles[`cols${cols}`])}>
+    <article className={cx(className, styles.palette, styles[forGroup])}>
       <ul>
         {swatches.map(({ name, text }) => (
           <li
-            className={`bg-${name}`}
             key={`all-colors-${name}`}
             style={{ color: text }}
-          >
-            {name}
+        >
+            <div
+            className={cx(`bg-${name}`)}
+            >
+                {name}
+            </div>
           </li>
         ))}
       </ul>

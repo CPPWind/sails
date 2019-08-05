@@ -3,6 +3,7 @@ const fs = require('fs')
 
 const clientParent = fs.existsSync('./app') ? './client' : './src'
 const appParent = './app'
+const storyParent = './stories/'
 const projectName = cc.camel(process.cwd().split('/').pop())
 
 const CLIENT_DIRS = [
@@ -18,7 +19,7 @@ const sourcePaths = CLIENT_DIRS.reduce(
 )
 
 sourcePaths.types = `${appParent}/graphql/types/`
-
+sourcePaths.stories = storyParent
 const extRegex = /^\./
 
 const pathTo = (source, ...parts) => {

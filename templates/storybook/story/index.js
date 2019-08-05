@@ -18,11 +18,13 @@ module.exports = {
     const pascal = cc.pascal(args.name)
     const camel = cc.camel(pascal)
 
-    args.componentPath = srcPath('components', pascal, 'Palette.js')
+    args.storyPath = srcPath('stories', pascal, 'index.stories.js')
+
+    args.componentPath = srcPath('stories', pascal, `${pascal}.js`)
 
     args.componentName = pascal
     args.cssFile = './' + CSS_FILE_NAME
-    args.cssPath = srcPath('components', pascal, CSS_FILE_NAME)
+    args.cssPath = srcPath('stories', pascal, CSS_FILE_NAME)
     args.cssSelector = camel
 
     console.log('args', args)

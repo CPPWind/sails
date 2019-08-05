@@ -95,12 +95,6 @@
     "group": "grayscale",
     "text": "var(--near-black)"
   },
-  "transparent": {
-    "name": "transparent",
-    "color": "transparent",
-    "group": "grayscale",
-    "text": "var(--near-black)"
-  },
   "black-90": {
     "name": "black-90",
     "color": "rgba(0, 0, 0, 0.9)",
@@ -255,7 +249,7 @@
     "name": "dark-purple",
     "color": "#431f73",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "yellow-green": {
     "name": "yellow-green",
@@ -285,13 +279,13 @@
     "name": "sienna",
     "color": "#a0522d",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "sandy-brown": {
     "name": "sandy-brown",
     "color": "#a0522d",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "burlywood": {
     "name": "burlywood",
@@ -351,7 +345,7 @@
     "name": "purple",
     "color": "#5e2ca5",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "light-purple": {
     "name": "light-purple",
@@ -387,7 +381,7 @@
     "name": "dark-green",
     "color": "#137752",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "green": {
     "name": "green",
@@ -405,13 +399,13 @@
     "name": "navy",
     "color": "#001b44",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "dark-blue": {
     "name": "dark-blue",
     "color": "#00449e",
     "group": "color",
-    "text": "var(--near-black)"
+    "text": "var(--near-white)"
   },
   "blue": {
     "name": "blue",

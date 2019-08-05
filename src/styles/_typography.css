@@ -97,3 +97,74 @@ li {
   padding: var(--spacing-none);
   list-style: none;
 }
+
+.headline {
+  font-size: var(--font-size-headline);
+}
+
+.subheadline {
+  font-size: var(--font-size-subheadline);
+}
+
+/* width for reading */
+.measure {
+  width: var(--measure);
+}
+
+.measure-narrow {
+  width: var(--measure-narrow);
+}
+
+.measure-wide {
+  width: var(--measure-wide);
+}
+
+.headline {
+  font-size: var(--headline);
+}
+.subheadline {
+  font-size: var(--subheadline);
+}
+.font-size-7 {
+  font-size: var(--font-size-7);
+}
+.font-size-6 {
+  font-size: var(--font-size-6);
+}
+.font-size-5 {
+  font-size: var(--font-size-5);
+}
+.font-size-4 {
+  font-size: var(--font-size-4);
+}
+.font-size-3 {
+  font-size: var(--font-size-3);
+}
+.font-size-2 {
+  font-size: var(--font-size-2);
+}
+.font-size-1 {
+  font-size: var(--font-size-1);
+}
+
+.letter-spacing-tight {
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.letter-spacing-1 {
+  letter-spacing: var(--letter-spacing-1);
+}
+
+.letter-spacing-2 {
+  letter-spacing: var(--letter-spacing-2);
+}
+
+.line-height-solid {
+  line-height: var(--line-height-solid);
+}
+.line-height-title {
+  line-height: var(--line-height-title);
+}
+.line-height-copy {
+  line-height: var(--line-height-copy);
+}
