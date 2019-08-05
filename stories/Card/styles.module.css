@@ -7,15 +7,19 @@
     height: 60% !important;
   }
 }
-.text {
 
+.text {
+  composes: card;
 }
 
 .list {
-
+  composes: card;
 }
 
 .figure {
-
+  composes: card;
 }
 
+.img {
+  composes: card;
+}

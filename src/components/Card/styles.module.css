@@ -67,6 +67,11 @@
 .textBody {
   composes: cardBody;
   padding: var(--spacing-small, 0.5rem);
+  overflow-y: auto;
+
+  & > p {
+    padding-bottom: var(--spacing-medium);
+  }
 }
 
 .imgBody {

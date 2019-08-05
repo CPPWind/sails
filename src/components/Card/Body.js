@@ -10,6 +10,12 @@ export const TextBody = ({ children, className, ...props }) => (
   </section>
 )
 
+export const CardBody = ({ className, children, ...props }) => (
+  <section className={cx(className, styles.cardBody)} {...props}>
+    {children}
+  </section>
+)
+
 TextBody.propTypes = {
   className: PropTypes.string,
   children: wrapperShape,

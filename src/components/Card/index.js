@@ -35,13 +35,7 @@ const Card = props => {
       <Body {...moreProps} className={styles.cardBody}>
         {children}
       </Body>
-      <footer className={styles.cardFooter}>
-        <ul className={styles.footerButtons}>
-          <li>Cancel</li>
-          <li>Edit</li>
-          <li>Delete</li>
-        </ul>
-      </footer>
+      <Footer />
     </Wrapper>
   )
 }
@@ -52,7 +46,7 @@ Card.propTypes = {
   Footer: wrapperShape,
   Header: wrapperShape,
   theme: PropTypes.string,
-  wrapper: wrapperShape,
+  Wrapper: wrapperShape,
   children: PropTypes.node,
 }
 Card.defaultProps = {
