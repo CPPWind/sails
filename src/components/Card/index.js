@@ -8,6 +8,7 @@ import { CardFooter } from './Footer'
 import { wrapperShape } from '../../utils/prop-types'
 
 export const bodyClassName = styles.cardBody
+export * from './Body'
 
 const Card = props => {
   const {
@@ -18,7 +19,7 @@ const Card = props => {
     Footer,
     children,
     theme,
-    border = true,
+    border,
     ...moreProps
   } = props
 
@@ -31,7 +32,7 @@ const Card = props => {
         border && styles.cardBorder,
       )}
     >
-      <Header {...moreProps} className={styles.cardHeader}/>
+      <Header {...moreProps} className={styles.cardHeader} />
       <Body {...moreProps} className={styles.cardBody}>
         {children}
       </Body>
@@ -48,6 +49,7 @@ Card.propTypes = {
   theme: PropTypes.string,
   Wrapper: wrapperShape,
   children: PropTypes.node,
+  border: PropTypes.bool,
 }
 Card.defaultProps = {
   theme: 'default',
@@ -55,5 +57,6 @@ Card.defaultProps = {
   Footer: CardFooter,
   Header: CardHeader,
   Wrapper: 'article',
+  border: true,
 }
 export default Card

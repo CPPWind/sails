@@ -6,7 +6,7 @@ import Card from '../../src/components/Card'
 import { TextBody } from '../../src/components/Card/Body'
 
 const TextCardStory = ({ className }) => (
-  <div className={cx(className, styles.text)}>
+  <section className={cx(className, styles.text)}>
     <Card title="Card" Body={TextBody}>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam risus
@@ -46,7 +46,7 @@ const TextCardStory = ({ className }) => (
       </p>
 
     </Card>
-  </div>
+  </section>
 )
 
 TextCardStory.propTypes = {

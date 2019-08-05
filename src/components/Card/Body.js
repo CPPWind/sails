@@ -4,18 +4,22 @@ import React from 'react'
 import styles from './styles.module.css'
 import { wrapperShape } from '../../utils/prop-types'
 
-export const TextBody = ({ children, className, ...props }) => (
-  <section className={cx(className, styles.textBody)} {...props}>
-    {children}
-  </section>
-)
-
 export const CardBody = ({ className, children, ...props }) => (
   <section className={cx(className, styles.cardBody)} {...props}>
     {children}
   </section>
 )
 
+CardBody.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+}
+
+export const TextBody = ({ children, className, ...props }) => (
+  <section className={cx(className, styles.textBody)} {...props}>
+    {children}
+  </section>
+)
 TextBody.propTypes = {
   className: PropTypes.string,
   children: wrapperShape,
@@ -36,30 +40,19 @@ const DefaultWrapped = ({ className, name }) => (
 export const ListBody = ({
   className,
   collection,
+  children,
   Wrapper = DefaultWrapper,
   Wrapped = DefaultWrapped,
 }) => {
   const collected = collection.map(item => (
     <Wrapper key={`listBody-collection-item-${item.id}`} {...item}>
+      {children}
       <Wrapped {...item} />
     </Wrapper>
   ))
 
   return <ul className={className}>{collected}</ul>
 }
-CardBody.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
-}
-DefaultWrapped.propTypes = {
-  className: PropTypes.string,
-  name: PropTypes.string.isRequired,
-}
-DefaultWrapper.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
-}
-
 ListBody.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
@@ -72,3 +65,19 @@ ListBody.propTypes = {
   Wrapper: wrapperShape,
   Wrapped: wrapperShape,
 }
+
+ListBody.defaultProps = {
+  collection: [],
+  Wrapper: DefaultWrapper,
+  Wrapped: DefaultWrapped,
+}
+
+DefaultWrapped.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string.isRequired,
+}
+DefaultWrapper.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+}
+
