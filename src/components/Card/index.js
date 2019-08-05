@@ -31,7 +31,7 @@ const Card = props => {
       className={cx(
         styles.card,
         className,
-        styles[theme],
+        styles[theme + 'Theme'],
         border && styles.cardBorder,
       )}
       {...wrapperProps}
