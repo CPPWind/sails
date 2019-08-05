@@ -7,20 +7,23 @@ import { CardBody } from './Body'
 import { CardFooter } from './Footer'
 import { wrapperShape } from '../../utils/prop-types'
 
-export const bodyClassName = styles.cardBody
 export * from './Body'
 
 const Card = props => {
   const {
     className,
+    title,
     Wrapper,
+    wrapperProps,
     Header,
-    Body,
     Footer,
+    headerProps,
+    footerProps,
+    Body,
     children,
     theme,
     border,
-    ...moreProps
+    ...bodyProps
   } = props
 
   return (
@@ -31,24 +34,29 @@ const Card = props => {
         styles[theme],
         border && styles.cardBorder,
       )}
+      {...wrapperProps}
     >
-      <Header {...moreProps} className={styles.cardHeader} />
-      <Body {...moreProps} className={styles.cardBody}>
+      <Header title={title} {...headerProps} className={styles.cardHeader} />
+      <Body {...bodyProps} className={styles.cardBody}>
         {children}
       </Body>
-      <Footer />
+      <Footer {...footerProps} className={styles.cardFooter} />
     </Wrapper>
   )
 }
 
 Card.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string,
+  children: PropTypes.node,
+  Wrapper: wrapperShape,
+  wrapperProps: PropTypes.object,
+  Header: wrapperShape,
+  headerProps: PropTypes.object,
   Body: wrapperShape,
   Footer: wrapperShape,
-  Header: wrapperShape,
+  footerProps: PropTypes.object,
   theme: PropTypes.string,
-  Wrapper: wrapperShape,
-  children: PropTypes.node,
   border: PropTypes.bool,
 }
 Card.defaultProps = {
@@ -58,5 +66,6 @@ Card.defaultProps = {
   Header: CardHeader,
   Wrapper: 'article',
   border: true,
+  children: null,
 }
 export default Card

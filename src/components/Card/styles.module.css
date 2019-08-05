@@ -80,3 +80,8 @@
   margin: var(--spacing-none, 0);
   width: 100%;
 }
+
+.listBody {
+  padding: var(--spacing-small, .5rem);
+
+}

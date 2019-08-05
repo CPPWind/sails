@@ -51,7 +51,7 @@ export const ListBody = ({
     </Wrapper>
   ))
 
-  return <ul className={className}>{collected}</ul>
+  return <ul className={cx(className, styles.listBody)}>{collected}</ul>
 }
 ListBody.propTypes = {
   className: PropTypes.string,
@@ -80,4 +80,3 @@ DefaultWrapper.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 }
-
