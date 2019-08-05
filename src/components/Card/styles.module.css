@@ -1,27 +1,54 @@
 .card {
+  --card-header-bg: var(--dark-blue);
+  --card-header-fg: var(--near-white);
+  --card-reading-bg: var(--black-20);
+  --card-reading-fg: var(--near-black);
+  --card-footer-bg: var(--dark-blue);
+  --card-footer-fg: var(--near-white);
+  --card-border-radius: var(--border-radius-3);
+  --card-border-color: var(--dark-blue);
+
   display: grid;
   margin: var(--spacing-none);
   padding: var(--spacing-none);
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius-3);
-  border-color: var(--dark-blue);
+  border-radius: var(--card-border-radius);
+  border-color: var(--card-border-color);
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "article" "footer";
+  grid-template-areas: 'header' 'body' 'footer';
 
-  & > header {
-    padding-right: var(--spacing-small);
-    padding-left: var(--spacing-small);
-    border-top-left-radius: var(--border-radius-3);
-    border-top-right-radius: var(--border-radius-3);
-    text-align: center;
-  }
+  & > * {
+    grid-column: 1;
+    width: 100%;
+    border-radius: var(--border-radius-none, 0);
 
-  & > *:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    &:first-child {
+      border-top-left-radius: var(--card-border-radius);
+      border-top-right-radius: var(--card-border-radius);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: var(--card-border-radius);
+      border-bottom-right-radius: var(--card-border-radius);
+    }
   }
+}
+
+.footerButtons {
+  composes: flexRow from global;
+  justify-content: space-evenly !important;
+  background-color: var(--black-20, rgba(0, 0, 0, 0.2));
+}
+
+.cardBorder {
+  border: thin solid var(--card-border-color);
+}
+
+.cardFooter {
+  grid-area: footer;
+  text-align: center;
+  color: var(--card-footer-fg);
+  background-color: var(--card-footer-bg);
 }
 
 .cardHeader {
@@ -31,22 +58,20 @@
   grid-area: header;
 }
 
-.cardArticle {
-  background-color: var(--card-article-bg);
-  color: var(--card-article-fg);
-  grid-area: article;
+.cardBody {
+  background-color: var(--card-reading-bg);
+  color: var(--card-reading-fg);
+  grid-area: body;
 }
 
-.default {
-  --card-header-bg: var(--dark-blue);
-  --card-header-fg: var(--near-white);
-  --card-article-bg: var(--white-20);
-  --card-article-fg: var(--near-black);
+.textBody {
+  composes: cardBody;
+  padding: var(--spacing-small, 0.5rem);
 }
 
-.angry {
-  --card-header-bg: var(--dark-red);
-  --card-header-fg: var(--black);
-  --card-article-bg: var(--washed-red);
-  --card-article-fg: var(--near-black);
+.imgBody {
+  composes: cardBody;
+  padding: var(--spacing-none, 0);
+  margin: var(--spacing-none, 0);
+  width: 100%;
 }

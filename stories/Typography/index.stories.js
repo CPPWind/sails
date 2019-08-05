@@ -42,4 +42,21 @@ story.add("FontSpacing", () => {
   );
 });
 
-story.add("Fonts", () => <Fonts />);
+story.add("Fonts", () => {
+  const fontSize = select('fontSize', [
+    'font-size-headline',
+    'font-size-subheadline',
+    'font-size-7',
+    'font-size-6',
+    'font-size-5',
+    'font-size-4',
+    'font-size-3',
+    'font-size-2',
+    'font-size-1',
+  ], 'font-size-4')
+  const fontWeight = select('Font Weight',[
+    100,200,300,400,500,600,700,800,900,1000
+  ], 400)
+
+  return <Fonts fontSize={fontSize} fontWeight={fontWeight}/>
+});

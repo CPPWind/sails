@@ -3,31 +3,63 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './styles.module.css'
 import { CardHeader } from './Header'
-import { CardArticle } from './Article'
+import { CardBody } from './Body'
+import { CardFooter } from './Footer'
+import { wrapperShape } from '../../utils/prop-types'
+
+export const bodyClassName = styles.cardBody
 
 const Card = props => {
-  const { className, Header, Article, children, theme, ...moreProps } = props
+  const {
+    className,
+    Wrapper,
+    Header,
+    Body,
+    Footer,
+    children,
+    theme,
+    border = true,
+    ...moreProps
+  } = props
 
   return (
-    <section className={cx(styles.card, className, styles[theme])}>
-      <Header {...moreProps} className={styles.cardHeader} />
-      <Article {...moreProps} className={styles.cardArticle}>
+    <Wrapper
+      className={cx(
+        styles.card,
+        className,
+        styles[theme],
+        border && styles.cardBorder,
+      )}
+    >
+      <Header {...moreProps} className={styles.cardHeader}/>
+      <Body {...moreProps} className={styles.cardBody}>
         {children}
-      </Article>
-    </section>
+      </Body>
+      <footer className={styles.cardFooter}>
+        <ul className={styles.footerButtons}>
+          <li>Cancel</li>
+          <li>Edit</li>
+          <li>Delete</li>
+        </ul>
+      </footer>
+    </Wrapper>
   )
 }
 
 Card.propTypes = {
   className: PropTypes.string,
-  Article: PropTypes.node,
-  Header: PropTypes.node,
-  children: PropTypes.node,
+  Body: wrapperShape,
+  Footer: wrapperShape,
+  Header: wrapperShape,
   theme: PropTypes.string,
+  wrapper: wrapperShape,
+  children: PropTypes.node,
 }
 Card.defaultProps = {
   theme: 'default',
+  Body: CardBody,
+  Footer: CardFooter,
   Header: CardHeader,
-  Article: CardArticle,
+  Wrapper: 'article',
 }
 export default Card

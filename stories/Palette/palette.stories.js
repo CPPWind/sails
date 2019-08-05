@@ -21,7 +21,7 @@ const lorem = [
 const colors = Object.keys(paletteData).filter(c => !c.startsWith('black-') && !c.startsWith('white-'))
 const bgColors = colors.map(name => `bg-${name}`)
 console.log(colors, bgColors)
-const palette = storiesOf("2 Color Palette", module);
+const palette = storiesOf("Color Palette", module);
 palette.addDecorator(withKnobs);
 palette.add("Brand Colors", () => <Palette forGroup="brand" />);
 palette.add("Grayscale", () => <Palette forGroup="grayscale" />);

@@ -1,0 +1,21 @@
+.card {
+  height: 100%;
+  composes: flexCenter from global;
+
+  & > * {
+    width: var(--measure) !important;
+    height: 60% !important;
+  }
+}
+.text {
+
+}
+
+.list {
+
+}
+
+.figure {
+
+}
+

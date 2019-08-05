@@ -7,7 +7,7 @@ storiesOf("1 CPP Atmosphere", module).add("Readme", () => (
     <header>
       <h2>CPP Atmosphere</h2>
     </header>
-    <p>A Styleguide and react component library</p>
+    <p>A Style guide and react component library</p>
   </article>
 ));
 

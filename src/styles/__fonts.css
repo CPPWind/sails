@@ -1,19 +1,19 @@
 /*
  * Copyright (c) 2019.  Cermak, Peterka, & Peterson.
  */
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:400,500,700|Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Advent+Pro|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Advent+Pro:400,500,700|Open+Sans");
 
 :root {
   /* font groups */
-  --sans-serif: 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  --sans-serif: "avenir next", avenir, helvetica, "helvetica neue", ubuntu,
+    roboto, noto, "segoe ui", arial, sans-serif;
   --serif: georgia, serif;
   --code: consolas, monaco, monospace;
-  --open-sans: 'Open Sans', var(--sans-serif);
-  --advent-pro: 'Advent Pro', var(--sans-serif);
-  --advent-pro-medium: 'Advent Pro', medium;
-  --advent-pro-bold: 'Advent Pro', bold;
-
+  --open-sans: "Open Sans", var(--sans-serif);
+  --advent-pro: "Advent Pro", var(--sans-serif);
+  --advent-pro-medium: "Advent Pro", medium;
+  --advent-pro-bold: "Advent Pro", bold;
 
   /* Font Sizes */
   --font-size-headline: 6rem;
