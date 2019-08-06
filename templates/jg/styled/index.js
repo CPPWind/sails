@@ -18,7 +18,7 @@ module.exports = {
     const pascal = cc.pascal(args.name)
     const camel = cc.camel(pascal)
 
-    args.componentPath = srcPath('components', pascal, 'Palette.js')
+    args.componentPath = srcPath('components', pascal, 'index.js')
 
     args.componentName = pascal
     args.cssFile = './' + CSS_FILE_NAME

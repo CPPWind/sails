@@ -2,6 +2,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './styles.module.css'
+import themes from './themes.module.css'
 import { CardHeader } from './Header'
 import { CardBody } from './Body'
 import { CardFooter } from './Footer'
@@ -31,7 +32,7 @@ const Card = props => {
       className={cx(
         styles.card,
         className,
-        styles[theme + 'Theme'],
+        themes[theme],
         border && styles.cardBorder,
       )}
       {...wrapperProps}
