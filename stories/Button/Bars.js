@@ -8,6 +8,8 @@ const BarStory = ({ className }) => (
   <div className={cx(className, styles.bars)}>
       <section className="vertical">
         <Bar>
+
+          A Bar
         </Bar>
       </section>
   </div>
