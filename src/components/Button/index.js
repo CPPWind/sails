@@ -6,12 +6,24 @@ import themes from './themes.module.css'
 import { wrapperShape } from '../../utils/prop-types'
 export * from './Bar'
 
-const Button = ({ className, label, children, theme, Btn, size }) => (
-  <Btn className={cx(className, styles.button, styles[size], themes[theme])}>
+const Button = ({
+  className,
+  label,
+  children,
+  theme,
+  Btn,
+  size,
+  doClick,
+  style,
+}) => (
+  <Btn
+    className={cx(className, styles.button, styles[size], themes[theme])}
+    onClick={doClick}
+    style={style}
+  >
     {children || label}
   </Btn>
 )
-
 
 Button.propTypes = {
   Btn: wrapperShape,
@@ -20,11 +32,17 @@ Button.propTypes = {
   children: PropTypes.number,
   theme: PropTypes.string,
   size: PropTypes.string,
+  doClick: PropTypes.func,
+  style: PropTypes.objectOf(PropTypes.string),
 }
 Button.defaultProps = {
   theme: 'default',
   Btn: 'button',
+  doClick: () => false,
   size: 'medium',
+  style: {},
 }
 
+export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
+export const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
 export default Button
