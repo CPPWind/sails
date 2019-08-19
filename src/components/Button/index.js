@@ -4,6 +4,10 @@ import React from 'react'
 import styles from './styles.module.css'
 import themes from './themes.module.css'
 import { wrapperShape } from '../../utils/prop-types'
+
+export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
+export const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
+
 export * from './Bar'
 
 const Button = ({
@@ -29,9 +33,9 @@ Button.propTypes = {
   Btn: wrapperShape,
   className: PropTypes.string,
   label: PropTypes.string,
-  children: PropTypes.number,
-  theme: PropTypes.string,
-  size: PropTypes.string,
+  children: PropTypes.node,
+  theme: PropTypes.oneOf(buttonThemes),
+  size: PropTypes.oneOf(buttonSizes),
   doClick: PropTypes.func,
   style: PropTypes.objectOf(PropTypes.string),
 }
@@ -43,6 +47,4 @@ Button.defaultProps = {
   style: {},
 }
 
-export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
-export const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
 export default Button

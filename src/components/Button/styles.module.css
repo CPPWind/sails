@@ -47,8 +47,9 @@
   --button-padding-vert: var(--spacing-extra-small);
   --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
   --button-font-size: var(--font-size-5);
+
+  font-weight: bold;
 }
 .bar {
-
+  q
 }
-
