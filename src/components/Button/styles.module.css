@@ -17,6 +17,18 @@
   font-size: var(--button-font-size);
 }
 
+.iconLeft {
+  & > *:first-child {
+    padding-right: var(--spacing-small, .5rem);
+  }
+}
+
+.iconRight {
+  & > *:last-child {
+    padding-left: var(--spacing-small, .5rem);
+  }
+}
+
 .small {
   --button-border-radius: var(--border-radius-1);
   --button-padding-horiz: var(--spacing-extra-small);
@@ -51,5 +63,5 @@
   font-weight: bold;
 }
 .bar {
-  q
+
 }

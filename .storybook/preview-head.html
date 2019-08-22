@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../stories/styles.module.css" />
+<script src="../stories/index.stories.js"></script>
 <link rel="stylesheet" href="../stories/Palette/styles.module.css" />
 <style>
   html,
@@ -9,7 +11,15 @@
     padding: var(--spacing-none, 0);
   }
 
+  #story-root {
+    background-color: var(--white, #fff);
+  }
+
+  #root > div > div:last-child > div {
+    background-color: var(--black-10, rgba(0, 0, 0, 0.1)) !important;
+  }
+
   body {
-    padding: var(--spacing-extra-small, 0.25rem) var(--spacing-small, 0.5rem) !important;
+    /*padding: var(--spacing-extra-small, 0.25rem) var(--spacing-small, 0.5rem) !important;*/
   }
 </style>

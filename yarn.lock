@@ -1119,6 +1119,54 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.3.tgz#dfa0c92efe44a1d1a7974fb49ffeb40ef2da5a27"
   integrity sha512-zVgvPwGK7c1aVdUVc9Qv7SqepOGRDrqCw7KZPSZziWGxSlbII3gmvGLPzLX4d0n0BMbamBacUrN22zOMyFFEkQ==
 
+"@fortawesome/fontawesome-common-types@^0.2.21":
+  version "0.2.21"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.21.tgz#f1c26ae24761cca583de7cafd1273ab4c70a4d87"
+  integrity sha512-iJtcrU2BtF9Wyr0zm3tHEJy3HqA6sADExhCqCv3SKaJJKKp4ORJ40t4nyHvcWXSVFtd7r1gcdqcRsAfoREGTFA==
+
+"@fortawesome/fontawesome-svg-core@^1.2.21":
+  version "1.2.21"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.21.tgz#5b08a28d6e1ea198e002447b158abba00fd12122"
+  integrity sha512-EhrgMZLJS0tTYZhUbodurZBqDgAFLDNdxJP/q5unrZJwiFo8Dd7xGvJdhAhY5WcX4khzkPQcbLTCMPHBtutD7Q==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.21"
+
+"@fortawesome/free-solid-svg-icons@^5.10.1":
+  version "5.10.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.10.1.tgz#535fd5429dbe99656de4f1a8ee42d9f8f5a7aef9"
+  integrity sha512-MKH+SCt0DnVoXdemxf6JEdTRtCPwYLMCWZcwgGccYU/ab6QcDtbAMn6Xm4Zub6YqQCcaiy0hU294YdHOldSBRA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.21"
+
+"@fortawesome/pro-light-svg-icons@^5.10.1":
+  version "5.10.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-light-svg-icons/-/pro-light-svg-icons-5.10.1.tgz#cad4424b2ad8ac2e1180665be3f7d076b319dee5"
+  integrity sha512-Z4dQ7bbvvXyEn4dWWPVZR74wWBGUhqfraf1BtS03vuaMEfc7QuMws4CJCvKNvtwolsaaj6PjEpSr2lzfsGrWsQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.21"
+
+"@fortawesome/pro-regular-svg-icons@^5.10.1":
+  version "5.10.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-regular-svg-icons/-/pro-regular-svg-icons-5.10.1.tgz#914c50520ed8991bd6aa59b52a03ef5fc6d65454"
+  integrity sha512-CMOLekemx3f1FVdr50TFo7AB8sMsQTCmAyyHc3Jd3dIDSpd+rtEP+j6uYD0r4aTAPUF08ktvxHuu4Howh3cqCA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.21"
+
+"@fortawesome/pro-solid-svg-icons@^5.10.1":
+  version "5.10.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-solid-svg-icons/-/pro-solid-svg-icons-5.10.1.tgz#37d9641baa96a76216dc72af9136f2952eb2a5f0"
+  integrity sha512-MdHMBSE40zKMHSPEwmU2nSwZRQUO1an9f+mENHqFi6apUS4q4WwrxHABsmOfk/2e+GSIEJchOVMiljqpUqbbUQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.21"
+
+"@fortawesome/react-fontawesome@^0.1.4":
+  version "0.1.4"
+  resolved "https://npm.fontawesome.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.4.tgz#18d61d9b583ca289a61aa7dccc05bd164d6bc9ad"
+  integrity sha512-GwmxQ+TK7PEdfSwvxtGnMCqrfEm0/HbRHArbUudsYiy9KzVCwndxa2KMcfyTQ8El0vROrq8gOOff09RF1oQe8g==
+  dependencies:
+    humps "^2.0.1"
+    prop-types "^15.5.10"
+
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
@@ -1378,6 +1426,15 @@
     react "^16.8.3"
     react-inspector "^3.0.2"
     uuid "^3.3.2"
+
+"@storybook/addon-centered@^5.1.11":
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-5.1.11.tgz#4a50f2103528994d86fea4789ad0b5366638bbbc"
+  integrity sha512-XZ7recfyzXHQVY7M60P9SpwHFCxR19Z46bH2A2QmPiVx+qvPmLZF1qRqW++T4C9gVPp0wxbpUT7FxFIbp1aXYg==
+  dependencies:
+    core-js "^3.0.1"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
 
 "@storybook/addon-info@^5.1.11":
   version "5.1.11"
@@ -6636,6 +6693,11 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+humps@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
+  integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
 husky@^3.0.2:
   version "3.0.2"

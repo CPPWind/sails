@@ -1,0 +1,10 @@
+
+.tableComponent {
+  & th {
+    text-align: left;
+  }
+
+  & > tbody > tr:nth-child(odd) {
+    background-color: var(--black-10);
+  }
+}

@@ -4,10 +4,10 @@ import React from 'react'
 import styles from './styles.module.css'
 import themes from './themes.module.css'
 import { wrapperShape } from '../../utils/prop-types'
+import Icon, { allIcons } from '../Icon'
 
 export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
 export const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
-
 export * from './Bar'
 
 const Button = ({
@@ -19,15 +19,32 @@ const Button = ({
   size,
   doClick,
   style,
-}) => (
-  <Btn
-    className={cx(className, styles.button, styles[size], themes[theme])}
-    onClick={doClick}
-    style={style}
-  >
-    {children || label}
-  </Btn>
-)
+  icon,
+  iconRight,
+}) => {
+  const rightIcon =
+    iconRight && icon && icon !== 'none' ? <Icon icon={icon} /> : null
+  const leftIcon =
+    !iconRight && icon && icon !== 'none' ? <Icon icon={icon} /> : null
+  return (
+    <Btn
+      className={cx(
+        className,
+        styles.button,
+        styles[size],
+        themes[theme],
+        rightIcon && styles.iconRight,
+        leftIcon && styles.iconLeft,
+      )}
+      onClick={doClick}
+      style={style}
+    >
+      {leftIcon}
+      {children || label || 'PROGRAMMING FAIL!'}
+      {rightIcon}
+    </Btn>
+  )
+}
 
 Button.propTypes = {
   Btn: wrapperShape,
@@ -38,7 +55,10 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   doClick: PropTypes.func,
   style: PropTypes.objectOf(PropTypes.string),
+  icon: PropTypes.oneOf(allIcons),
+  iconRight: PropTypes.bool,
 }
+
 Button.defaultProps = {
   theme: 'default',
   Btn: 'button',

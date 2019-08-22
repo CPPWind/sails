@@ -28,3 +28,8 @@
 
 }
 
+.featured {
+  composes: flexCenter from global;
+  padding: var(--spacing-extra-large, 4rem);
+
+}
