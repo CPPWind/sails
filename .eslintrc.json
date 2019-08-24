@@ -1,12 +1,14 @@
 {
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "plugins": [
-    "prettier"
+    "prettier", "react"
   ],
   "extends": [
+    "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
@@ -74,5 +76,11 @@
       "global"
     ],
     "semi": 0
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
   }
 }
