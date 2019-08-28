@@ -4,7 +4,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import themes from './themes.module.css'
 import { wrapperShape } from '../../utils/prop-types'
-import Icon, { allIcons } from '../Icon'
+// import Icon, { allIcons } from '../Icon'
 
 export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
 export const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
@@ -22,10 +22,10 @@ const Button = ({
   icon,
   iconRight,
 }) => {
-  const rightIcon =
-    iconRight && icon && icon !== 'none' ? <Icon icon={icon} /> : null
-  const leftIcon =
-    !iconRight && icon && icon !== 'none' ? <Icon icon={icon} /> : null
+  const rightIcon = 'O'
+  // iconRight && icon && icon !== 'none' ? <Icon icon={icon} /> : null
+  const leftIcon = 'X'
+  // !iconRight && icon && icon !== 'none' ? <Icon icon={icon} /> : null
   return (
     <Btn
       className={cx(
