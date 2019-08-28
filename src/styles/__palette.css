@@ -24,8 +24,7 @@
 --near-white: #f4f4f4;
 --white: #fff;
 
-/* opacity */
---transparent: transparent;
+/* darkOpacity */
 --black-90: rgba(0, 0, 0, 0.9);
 --black-80: rgba(0, 0, 0, 0.8);
 --black-70: rgba(0, 0, 0, 0.7);
@@ -38,6 +37,8 @@
 --black-05: rgba(0, 0, 0, 0.05);
 --black-025: rgba(0, 0, 0, 0.025);
 --black-0125: rgba(0, 0, 0, 0.0125);
+
+/* lightOpacity */
 --white-90: rgba(255, 255, 255, 0.9);
 --white-80: rgba(255, 255, 255, 0.8);
 --white-70: rgba(255, 255, 255, 0.7);

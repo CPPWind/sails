@@ -18,7 +18,7 @@ module.exports = {
     const pascal = cc.pascal(args.name)
     const camel = cc.camel(pascal)
 
-    args.storyPath = srcPath('stories', pascal, 'index.stories.js')
+    args.storyPath = srcPath('stories', pascal, 'index.js')
 
     args.componentPath = srcPath('stories', pascal, `${pascal}.js`)
 
