@@ -18,7 +18,7 @@ story.add(
     const label = text('Label', 'Button')
     const theme = select('Theme', buttonThemes, 'default')
     const size = select('Size', buttonSizes, 'medium')
-    const icon = select('Icon', allIcons, 'none')
+    // const icon = select('Icon', allIcons, 'none')
     const iconRight = boolean('Icon on Right?', false)
     const style = { '--button-border-radius': '20px' }
     const doClick = action('Button Click')
