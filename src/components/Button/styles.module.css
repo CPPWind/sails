@@ -4,28 +4,28 @@
   --button-border-color: var(--near-black);
   --button-box-shadow-color: var(--silver);
 
-  box-shadow: var(--button-box-shadow);
   background-color: var(--button-bg);
+  border: none;
   border-color: var(--button-border-color);
   border-radius: var(--button-border-radius);
-  border: none;
+  box-shadow: var(--button-box-shadow);
   color: var(--button-fg);
-  display: inline;
-  text-align: center;
   cursor: pointer;
-  padding: var(--button-padding-vert) var(--button-padding-horiz);
+  display: inline;
   font-size: var(--button-font-size);
+  padding: var(--button-padding-vert) var(--button-padding-horiz);
+  text-align: center;
 }
 
 .iconLeft {
   & > *:first-child {
-    padding-right: var(--spacing-small, .5rem);
+    padding-right: var(--spacing-small, 0.5rem);
   }
 }
 
 .iconRight {
   & > *:last-child {
-    padding-left: var(--spacing-small, .5rem);
+    padding-left: var(--spacing-small, 0.5rem);
   }
 }
 
@@ -63,5 +63,4 @@
   font-weight: bold;
 }
 .bar {
-
 }

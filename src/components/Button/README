@@ -1,0 +1,31 @@
+# Button
+
+## Styling
+```css
+  --button-fg: var(--near-black);
+  --button-bg: var(--light-gray);
+  --button-border-color: var(--near-black);
+  --button-border-radius: --border-radius-2;
+  --button-border-style: solid;
+  --button-border-width: var(--spacing-none);
+  --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
+  --button-box-shadow-color: var(--silver);
+  --button-font-size: var(--font-size-3);
+  --button-padding-vert: var(--spacing-extra-small);
+  --button-padding-horiz: var(--spacing-small);
+```
+
+### Themes
+* none
+* default
+* info
+* success
+* warning
+* danger
+
+### Sizes
+* extra-small - *pending*
+* small
+* medium
+* large
+* extra-large
