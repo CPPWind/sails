@@ -9,7 +9,7 @@ import Button, { buttonThemes, buttonSizes } from '../../src/components/Button'
 const ButtonStory = ({ className }) => {
   const label = text('Button Label')
   return (
-    <div className={cx(className, styles.button)}>
+    <div className={cx(className, styles.buttonStory)}>
       <ul>
         {buttonSizes.map((size, idx) => (
           <React.Fragment key={`buttonStory-button-sizes-${size}`}>

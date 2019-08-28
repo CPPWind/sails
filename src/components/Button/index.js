@@ -6,7 +6,7 @@ import themes from './themes.module.css'
 import { wrapperShape } from '../../utils/prop-types'
 
 export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
-export const buttonSizes = ['small', 'medium', 'large', 'extraLarge']
+export const buttonSizes = ['extraSmall','small', 'medium', 'large', 'extraLarge']
 export * from './Bar'
 
 const Button = ({
