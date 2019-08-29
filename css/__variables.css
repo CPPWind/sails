@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2018. CPP, Inc. All rights reserved.
+ * Also protected by Patent Pending: 15/916,593
+ */
+@import './__fonts.css';
+@import './__layout.css';
+@import './__media.css';
+@import './__palette.css';
+
+:root {
+
+  /* Base Fonts */
+  --body-font: var(--open-sans);
+  --headers-font: var(--advent-pro);
+  --body-font-size: var(--font-size-3);
+
+  /* Font Color */
+  --base-font-color: var(--near-black);
+  --base-link-color: var(--dark-purple);
+}
+
+/*# sourceMappingURL=__variables.css.map */
