@@ -1,0 +1,24 @@
+.grow {
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.glow {
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(1,1,1, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+
+  &:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+}

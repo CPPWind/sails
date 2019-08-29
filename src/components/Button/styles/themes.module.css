@@ -1,6 +1,5 @@
 .base {
   --button-border-color: var(--near-black);
-  --button-border-radius: var(--border-radius-3);
   --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
   --button-box-shadow-color: var(--silver);
   --button-padding-horiz: var(--spacing-small);

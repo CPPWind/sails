@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { text } from '@storybook/addon-knobs'
 import React from 'react'
 import styles from './styles.module.css'
-import Button, { buttonThemes, buttonSizes } from '../../src/components/Button'
+import  { Button, buttonThemes, buttonSizes } from '../../src/components/Button'
 
 const ButtonStory = ({ className }) => {
   const label = text('Button Label')

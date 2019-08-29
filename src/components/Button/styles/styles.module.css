@@ -7,14 +7,21 @@
   background-color: var(--button-bg);
   border: none;
   border-color: var(--button-border-color);
-  border-radius: var(--button-border-radius, 0);
+  border-radius: var(--button-border-radius);
   box-shadow: var(--button-box-shadow);
   color: var(--button-fg);
   cursor: pointer;
   display: inline;
+  line-height: var(--line-height-solid, 1);
   font-size: var(--button-font-size, 1rem);
   padding: var(--button-padding-vert, 0.25rem)
     var(--button-padding-horiz, 0.5rem);
   text-align: center;
   font-weight: var(--button-font-weight, bold);
+  vertical-align: middle;
+}
+
+.disabled {
+  filter: brightness(75%);
+  cursor: not-allowed;
 }

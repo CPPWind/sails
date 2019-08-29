@@ -1,15 +1,16 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
-import styles from './styles.module.css'
-import themes from './themes.module.css'
-import animations from './animations.module.css'
-import sizes from './sizes.module.css'
-
-console.log('style keys for Button')
-[styles, themes, animations, sizes].forEach(obj => console.log(Object.keys(obj)))
+import animations from './styles/animations.module.css'
+import shapes from './styles/shapes.module.css'
+import sizes from './styles/sizes.module.css'
+import styles from './styles/styles.module.css'
+import themes from './styles/themes.module.css'
 
 import { wrapperShape } from '../../utils/prop-types'
+
+// console.log('style keys for Button')
+// [styles, themes, animations, sizes].forEach(obj => console.log(Object.keys(obj)))
 
 export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
 export const buttonSizes = [
@@ -19,10 +20,10 @@ export const buttonSizes = [
   'large',
   'extraLarge',
 ]
-export const buttonAnimations = Object.keys(animations)
-export * from './Bar'
+export const buttonAnimations = ['glow', 'grow']
+export const buttonShapes = ['flat', 'gentle', 'pill']
 
-const BasicButton = ({
+export const Button = ({
   className,
   label,
   children,
@@ -32,14 +33,18 @@ const BasicButton = ({
   doClick,
   style,
   animation,
+  shape,
+  disabled,
 }) => (
   <Btn
     className={cx(
       className,
       styles.button,
-      animations[animation],
+      animations[disabled || animation],
       sizes[size],
       themes[theme],
+      shapes[shape],
+      disabled && styles.disabled,
     )}
     onClick={doClick}
     style={style}
@@ -49,7 +54,7 @@ const BasicButton = ({
 )
 
 Button.propTypes = {
-  animation: PropTypes.string,
+  animation: PropTypes.oneOf(buttonAnimations),
   Btn: wrapperShape,
   className: PropTypes.string,
   label: PropTypes.string,
@@ -58,6 +63,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   doClick: PropTypes.func,
   style: PropTypes.objectOf(PropTypes.string),
+  shape: PropTypes.oneOf(buttonShapes),
 }
 
 Button.defaultProps = {
@@ -67,6 +73,5 @@ Button.defaultProps = {
   size: 'medium',
   style: {},
   animation: 'grow',
+  shape: 'gentle',
 }
-
-export default BasicButton

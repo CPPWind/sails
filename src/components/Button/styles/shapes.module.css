@@ -1,0 +1,23 @@
+.flat {
+  --button-border-radius-extraSmall: var(--border-radius-none, 0);
+  --button-border-radius-small: var(--border-radius-none, 0);
+  --button-border-radius-medium: var(--border-radius-none, 0);
+  --button-border-radius-large: var(--border-radius-none, 0);
+  --button-border-radius-extraLarge: var(--border-radius-none, 0);
+}
+
+.gentle {
+  --button-border-radius-extraSmall: var(--border-radius-2, 0.5rem);
+  --button-border-radius-small: var(--border-radius-2, 0.5rem);
+  --button-border-radius-medium: var(--border-radius-3, 1rem);
+  --button-border-radius-large: var(--border-radius-3, 1rem);
+  --button-border-radius-extraLarge: var(--border-radius-3, 1rem);
+}
+
+.pill {
+  --button-border-radius-extraSmall: var(--border-radius-pill);
+  --button-border-radius-small: var(--border-radius-pill);
+  --button-border-radius-medium: var(--border-radius-pill);
+  --button-border-radius-large: var(--border-radius-pill);
+  --button-border-radius-extraLarge: var(--border-radius-pill);
+}
