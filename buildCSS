@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+
+
+
+yarn run postcss src/styles/*.css --config 'src/styles' --map -d css
+yarn run postcss src/styles/backgrounds/*.css --config 'src/backgrounds' -d css
+yarn run postcss src/styles/min/*.css --config 'src/min' -d css/
+yarn run postcss src/styles/tachyons/*.css --config 'src/tachyons' --map -d css/tachyons

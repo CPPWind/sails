@@ -1,0 +1,44 @@
+.extraSmall {
+  --button-border-radius: var(--border-radius-1, 0.125rem);
+  --button-padding-horiz: var(--spacing-extra-extra-small, 0.125rem);
+  --button-padding-vert: var(--spacing-extra-extra-small, 0.125rem);
+  --button-box-shadow: 1px 2px 2px var(--button-box-shadow-color);
+  --button-font-size: var(--font-size-1, 0.75rem);
+  --button-font-weight: bold;
+}
+
+.small {
+  --button-border-radius: var(--border-radius-1, 0.125rem);
+  --button-padding-horiz: var(--spacing-extra-small, 0.25rem);
+  --button-padding-vert: var(--spacing-extra-extra-small, 0.125rem);
+  --button-box-shadow: 1px 2px 2px var(--button-box-shadow-color);
+  --button-font-size: var(--font-size-2, 0.875rem);
+  --button-font-weight: bold;
+}
+
+.medium {
+  --button-border-radius: var(--border-radius-2, 0.25rem);
+  --button-padding-horiz: var(--spacing-small, 0.5rem);
+  --button-padding-vert: var(--spacing-extra-small, 0.25rem);
+  --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
+  --button-font-size: var(--font-size-3, 1rem);
+  --button-font-weight: bold;
+}
+
+.large {
+  --button-border-radius: var(--border-radius-3, 0.5rem);
+  --button-padding-horiz: var(--spacing-small, 0.5rem);
+  --button-padding-vert: var(--spacing-extra-small, 0.125rem);
+  --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
+  --button-font-size: var(--font-size-4, 1.25rem);
+  --button-font-weight: bold;
+}
+
+.extraLarge {
+  --button-border-radius: var(--border-radius-3, 0.5rem);
+  --button-padding-horiz: var(--spacing-small, 0.25rem);
+  --button-padding-vert: var(--spacing-extra-small, 0.125rem);
+  --button-box-shadow: 2px 3px 3px var(--button-box-shadow-color);
+  --button-font-size: var(--font-size-5, 1.5rem);
+  --button-font-weight: bold;
+}

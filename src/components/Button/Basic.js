@@ -6,6 +6,9 @@ import themes from './themes.module.css'
 import animations from './animations.module.css'
 import sizes from './sizes.module.css'
 
+console.log('style keys for Button')
+[styles, themes, animations, sizes].forEach(obj => console.log(Object.keys(obj)))
+
 import { wrapperShape } from '../../utils/prop-types'
 
 export const buttonThemes = ['default', 'info', 'success', 'warning', 'danger']
@@ -19,7 +22,7 @@ export const buttonSizes = [
 export const buttonAnimations = Object.keys(animations)
 export * from './Bar'
 
-const Button = ({
+const BasicButton = ({
   className,
   label,
   children,
@@ -66,4 +69,4 @@ Button.defaultProps = {
   animation: 'grow',
 }
 
-export default Button
+export default BasicButton
