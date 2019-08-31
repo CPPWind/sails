@@ -52,4 +52,25 @@ describe('pathTo', () => {
       })
     })
   })
+
+  describe('original tests', () => {
+    it('should have properties (...basePath)', () => {
+      const result = new pathTo('a', 'b')
+      expect(result.base).toIncludeSameMembers(['a', 'b'])
+      expect(result.currentPath).toBe('a/b')
+    })
+    it('should add paths', () => {
+      const result = new pathTo('a', 'b').add('c')
+      expect(result.base).toIncludeSameMembers(['a', 'b', 'c'])
+      expect(result.currentPath).toBe('a/b/c')
+    })
+    it('should return path', () => {
+      const result = new pathTo('a', 'b').add('c')
+      expect(result.path('d', 'e')).toBe('a/b/c/d/e')
+    })
+    it('should return current path if called empty', () => {
+      const result = new pathTo('a', 'b')
+      expect(result.path()).toBe('a/b')
+    })
+  })
 })
