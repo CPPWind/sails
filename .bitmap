@@ -495,5 +495,38 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "cppwind.sails/template-helpers@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/templates/helpers/__tests__/nameMaker.test.js",
+                "test": false,
+                "name": "nameMaker.test.js"
+            },
+            {
+                "relativePath": "src/templates/helpers/__tests__/pathTo.test.js",
+                "test": false,
+                "name": "pathTo.test.js"
+            },
+            {
+                "relativePath": "src/templates/helpers/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/templates/helpers/nameMaker.js",
+                "test": false,
+                "name": "nameMaker.js"
+            },
+            {
+                "relativePath": "src/templates/helpers/pathTo.js",
+                "test": false,
+                "name": "pathTo.js"
+            }
+        ],
+        "mainFile": "src/templates/helpers/index.js",
+        "trackDir": "src/templates/helpers",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "version": "14.2.5"
 }
