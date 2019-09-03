@@ -1,6 +1,7 @@
 const cc = require('change-case')
 const fs = require('fs')
 const path = require('path')
+const {pathTo} = require('../../helpers')
 
 const STANDARD_SRC_ROOT = ['client', 'app']
 const STANDARD_SRC_DEFAULT = 'src'
@@ -8,11 +9,9 @@ const SRC_ROOT =
   STANDARD_SRC_ROOT.find(p => fs.existsSync(`./${p}`)) || STANDARD_SRC_DEFAULT
 const DEFAULT_PROJECT_NAME = cc.camel(path.basename(process.cwd()))
 
-const mkPathMaker = root => sub => path.normalize(path.join(root, sub))
-const mkPath = sub =>
 module.exports = {
-  prompt: ({ prompter, args: { v, verbose, ...args } }) => {
-    const beVerbose = v || verbose
+  prompt: ({ prompter, args }) => {
+    const beVerbose = args.v || args.verbose
     return prompter
       .prompt([
         {
@@ -41,20 +40,14 @@ module.exports = {
         },
       ])
       .then(answers => {
-        const dirs = {
-          root: process.cwd(),
-        }
-        dirs.src = mkPath.normalize(path.join(dirs.root, answers.dirSource))
-        dirs.default = {
-          answers.subDirs
-            .trim()
-            .split(/,\s*/)
-            .filter(p => p).reduce((hsh, p) => (hsh[p] = path.normalize(path.join(dirs.src, p)) && hsh) )
-        }
+        answers.subDirs = answers.subDirs
+          .trim()
+          .split(/,\s*/)
+          .filter(p => p)
+
         const final = {
           ...args,
           ...answers,
-          dirs,
           beVerbose,
         }
         if (beVerbose) console.log('Template Data:', final)
@@ -62,5 +55,3 @@ module.exports = {
       })
   },
 }
-const subDirs = ['a','b']
-const all = subDirs.map(subDir => `    ${subDir}: '${}',`).join("\n") %>

@@ -8,7 +8,7 @@
 */
 
 const cc = require('change-case')
-const srcPath = require(process.cwd() + '/.hygen').helpers.srcPath
+const srcPath = require(process.cwd() + '/.generators').helpers.srcPath
 
 const CSS_FILE_NAME = 'styles.module.css'
 
